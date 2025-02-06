@@ -1,0 +1,21 @@
+.big-icon {
+    $icon-size: 32px;
+    font-size: $icon-size;
+    height: $icon-size;
+    width: $icon-size;
+}
+
+.file-label {
+    display: block;
+}
+
+.file-name {
+    display: block;
+    font-style: italic;
+}
+
+mat-dialog-content {
+    mat-divider {
+        margin: 16px 0;
+    }
+}

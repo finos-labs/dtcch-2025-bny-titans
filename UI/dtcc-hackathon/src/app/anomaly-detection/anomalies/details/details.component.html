@@ -1,0 +1,28 @@
+<ng-container *ngIf="details">
+    <efm-dialog-header>Details</efm-dialog-header>
+    <mat-dialog-content>
+        <mat-accordion>
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        PROMPT
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <p [innerHTML]="details.prompt"></p>
+            </mat-expansion-panel>
+            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false" [expanded]="true">
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        RESPONSE
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <p [innerHTML]="details.response"></p>
+            </mat-expansion-panel>
+        </mat-accordion>
+    </mat-dialog-content>
+    <mat-divider />
+    <mat-dialog-actions>
+        <span class="spacer"></span>
+        <button mat-button mat-dialog-close>CLOSE</button>
+    </mat-dialog-actions>
+</ng-container>

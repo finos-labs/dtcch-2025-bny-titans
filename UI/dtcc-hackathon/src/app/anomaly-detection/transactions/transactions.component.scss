@@ -1,0 +1,9 @@
+efm-grid {
+    height: calc(100vh - 212px);
+}
+
+:host-context(body[sidenav]) {
+    efm-grid {
+        height: calc(100vh - 176px);
+    }
+}

@@ -1,0 +1,15 @@
+<mat-card id="header">
+    <mat-tab-group color="accent" mat-stretch-tabs="false" (selectedTabChange)="onSelectTab($event)">
+        <mat-tab *ngFor="let source of sources" [label]="source"></mat-tab>
+    </mat-tab-group>
+
+    <span class="spacer"></span>
+    <button mat-raised-button color="primary" style="margin-right: 8px" (click)="onUpload()">
+        <mat-icon class="material-symbols-outlined big-icon">attach_file</mat-icon>
+        <span>UPLOAD</span>
+    </button>
+</mat-card>
+
+<app-anomaly-detection-transactions *ngIf="showTransactions() && transData" [data]="transData" />
+<app-anomaly-detection-corporate-actions *ngIf="showCorporateActions() && corpData" [data]="corpData" />
+<app-anomaly-detection-anomalies *ngIf="showAnomalies()" />

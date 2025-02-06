@@ -1,0 +1,12 @@
+<mat-card id="header">
+    <mat-tab-group color="accent" mat-stretch-tabs="false" (selectedTabChange)="onSelectTab($event)" selectedIndex="0">
+        <mat-tab *ngFor="let source of sources" [label]="source"></mat-tab>
+    </mat-tab-group>
+</mat-card>
+
+<mat-card>
+    <mat-card-content>
+        <app-sanctions-entity *ngIf="showSanctionsEntity()" />
+        <app-sanctions-screening *ngIf="showSanctionsScreening()" />
+    </mat-card-content>
+</mat-card>

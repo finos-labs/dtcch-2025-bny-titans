@@ -1,0 +1,25 @@
+<efm-dialog-header>Upload Data Sources</efm-dialog-header>
+<mat-dialog-content>
+    <button mat-raised-button (click)="transFileInput.click()">
+        <mat-icon color="accent" class="material-symbols-outlined big-icon">csv</mat-icon>
+        <span>Transactions</span>
+    </button>
+    <p class="file-name">{{ transFileName }}</p>
+    <input #transFileInput type="file" hidden="true" (change)="onFileChange($event)" accept=".csv" />
+
+    <mat-divider />
+
+    <button mat-raised-button (click)="corpFileInput.click()">
+        <mat-icon color="accent" class="material-symbols-outlined big-icon">csv</mat-icon>
+        <span>Corporate Actions</span>
+    </button>
+    <p class="file-name">{{ corpFileName }}</p>
+    <input #corpFileInput type="file" hidden="true" (change)="onFileChange($event, true)" accept=".csv" />
+</mat-dialog-content>
+<mat-divider />
+<mat-dialog-actions>
+    <button mat-raised-button color="primary" (click)="onSubmit()" [disabled]="!canSubmit()">
+        <mat-icon class="material-symbols-outlined">upload</mat-icon>
+        <span>SUBMIT</span>
+    </button>
+</mat-dialog-actions>

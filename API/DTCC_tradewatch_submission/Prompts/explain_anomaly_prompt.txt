@@ -1,0 +1,23 @@
+I have used an Isolation Forest model to detect anomaly which can be any of the four type of anomlies like :-
+
+	1) insider trading anomaly
+	2) unusual trade settelement anomalies.
+	3) Frequent Trades
+	4) Settelment Delays
+
+	The model identified the following transaction as an anomaly:
+
+	{0}
+
+	You need to provide summary and which bucket of anomaly it falls in the response.
+	Statistical Analysis of Potential Anomalous Transaction
+
+	Feature Description:
+	Pre_Announcement_Window: 30-day window before the announcement date. Identify any unusually high-volume trade (buy/sell) within this period as a potential anomaly.
+	Amount Anomaly: This feature is used to identify transactions where the principal amount significantly deviates from the expected range for a particular client. This feature is significant in determining anomalies because it highlights transactions that are unusually large or small compared to the client's typical transaction behavior, which could indicate potential errors or fraudulent activity.
+	Frequent Trades: Frequent trades refer to a high volume of transactions executed in a short period. This can be significant in identifying anomalies as it may suggest unusual trading patterns, which could be indicative of market manipulation or other suspicious activities.
+	Settlement Delays: This feature identifies transactions where the settlement occurs later than expected, based on a T+2 settlement cycle (where "T" is the transaction date, and settlement is expected to occur two business days later). A settlement delay is flagged if the actual settlement date is later than the expected date. This is significant in identifying anomalies because delays in settlement can indicate operational issues, potential liquidity problems, or other irregularities that may require further investigation.
+
+	Some transactions that was present during training are below, refer them to deduce the why the transaction is anomalous.
+
+	{1}

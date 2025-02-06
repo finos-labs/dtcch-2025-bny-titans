@@ -1,0 +1,9 @@
+Generate some synthetic news like for example if real events are there return those only if not generate synthetic data, Give minimum 20 rows:-
+
+	The dates should be in '%Y-%m-%d' format
+	"2018-01-30",  # Amazon, Berkshire Hathaway, and JPMorgan Chase announce partnership to form a healthcare company aimed at improving U.S. employee healthcare.
+	"2018-06-28",  # Amazon acquires online pharmacy PillPack, signaling entry into the pharmaceutical industry.
+	"2018-09-04",  # Amazon becomes the second U.S. company to reach a $1 trillion market capitalization.
+	
+	for the company name: {0}, between dates {1} and {2}.
+	Give the response in the format like pattern = "{{\s*"date":\s*"([^"]+)",\s*"headline":\s*"([^"]+)"}}" I will use this pattern to extract it in the code.

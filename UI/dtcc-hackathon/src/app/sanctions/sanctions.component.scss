@@ -1,0 +1,27 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.panel {
+    display: flex;
+}
+
+.big-icon {
+    $icon-size: 32px;
+    font-size: $icon-size;
+    height: $icon-size;
+    width: $icon-size;
+}
+
+.file-label {
+    text-transform: uppercase;
+    display: block;
+}
+
+.file-name {
+    display: block;
+    font-weight: normal;
+    font-style: italic;
+}

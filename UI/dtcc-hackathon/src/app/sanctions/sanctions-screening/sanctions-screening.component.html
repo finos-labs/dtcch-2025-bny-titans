@@ -1,0 +1,23 @@
+<mat-card>
+    <mat-card-content class="panel">
+        <button mat-raised-button (click)="fileInput.click()">
+            <mat-icon color="accent" class="material-symbols-outlined big-icon">csv</mat-icon>
+            <span class="file-label">File</span>
+            <span class="file-name">{{ fileName }}</span>
+        </button>
+        <input #fileInput type="file" hidden="true" (change)="onFileChange($event)" accept=".xlsx" />
+
+        <span class="spacer"></span>
+
+        <button mat-raised-button color="primary" (click)="onGenerate()">
+            <mat-icon>verified</mat-icon>
+            <span>GENERATE</span>
+        </button>
+    </mat-card-content>
+</mat-card>
+
+<mat-card>
+    <mat-card-content>
+        <efm-grid [gridConfig]="gridConfigScreening" />
+    </mat-card-content>
+</mat-card>

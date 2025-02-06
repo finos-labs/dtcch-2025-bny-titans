@@ -1,0 +1,30 @@
+<efm-dialog-header>Details</efm-dialog-header>
+<mat-dialog-content>
+  <div><strong>Swift Message:</strong></div>
+  <div>
+    <textarea [rows]="5" class="swift-msg-disp" [innerHTML]="formattedSwiftMessage">
+  </textarea>
+  </div>
+  <br />
+  <div><strong>Entity Names:</strong></div>
+  <div *ngFor="let name of entityNames">
+    {{ name }}
+  </div>
+  <br />
+  <div><strong>Sanctioned Entities:</strong></div>
+  <div>{{sancEntity}}</div>
+  <br />
+  <div><strong>Final Decision:</strong></div>
+  <div> {{ data.final_decision }} </div>
+  <br />
+  <div><strong>LLM Decision:</strong></div>
+  <div *ngFor="let name of llmDesc">
+    {{ llmDesc }}
+  </div>
+  <br />
+</mat-dialog-content>
+<mat-divider />
+<mat-dialog-actions>
+  <span class="spacer"></span>
+  <button mat-button mat-dialog-close>CLOSE</button>
+</mat-dialog-actions>
